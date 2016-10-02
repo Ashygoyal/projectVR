@@ -11,12 +11,21 @@
       <a-assets>
         <img id="mozvr" src="img/mozvr.png">
         <img id="shadow2" src="img/radial-shadow-2.png">
+        <a-asset-item id="why-male-models" src="man/man.dae"></a-asset-item>
         <img id="ui1" src="img/w3.jpg">
         <img id="w1" src="img/w1.jpg">
         <img id="w2" src="img/w2.jpg">
         <img id="ui2" src="img/w4.jpg">
         <img id="ui3" src="img/w5.png">
       </a-assets>
+
+      <a-entity id="model" position="0 -2 -2">
+        <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000"
+                     easing="linear" repeat="indefinite"></a-animation>
+        <a-collada-model position="-.35 0 .55" rotation="0 -20 0" scale="1.5 1.5 1.5"
+                         src="#why-male-models"></a-collada-model>
+        <a-image src="#shadow2" rotation="-90 0 0" scale="0.5 0.5 0.5"></a-image>
+      </a-entity>
 
       <a-image position="0 5 0" src="#shadow2" rotation="-90 0 0" scale="6 6 6"></a-image>
       <a-curvedimage src="#ui3" radius="5.7" theta-length="80" height="6" rotation="0 150 0" scale="0.8 0.8 0.8"></a-curvedimage>
